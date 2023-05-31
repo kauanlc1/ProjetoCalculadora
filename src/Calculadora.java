@@ -11,7 +11,7 @@ public class Calculadora {
             System.out.print("Digite o segundo número: ");
             double numero2 = scanner.nextDouble();
 
-            System.out.print("Digite a operação (+, -, *, /): ");
+            System.out.print("Digite a operação (+, -, *, /,**): ");
             String operacao = scanner.next();
 
             switch (operacao) {
@@ -27,6 +27,9 @@ public class Calculadora {
                 case "/":
                     resultado = numero1 / numero2;
                     break;
+                case "**":
+                        resultado = Math.pow(numero1,numero2);
+                        break;
                 default:
                     System.out.println("Operação inválida.");
                     return;
